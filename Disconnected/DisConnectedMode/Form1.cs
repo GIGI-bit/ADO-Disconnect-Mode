@@ -10,6 +10,7 @@ public partial class Form1 : Form
     SqlConnection sqlConnection;
     SqlDataAdapter dataAdapter;
     DataTable dataTable;
+    SqlCommandBuilder sqlCommandBuilder;
     SqlCommand sqlCommand;
     SqlDataReader reader;
 
@@ -36,6 +37,31 @@ public partial class Form1 : Form
 
     private void btn_select_Click(object sender, EventArgs e)
     {
+        try
+        {
+            sqlConnection.Open();
+            sqlCommand=new SqlCommand("SELECT * FROM Authors WHERE FirstName=@name", sqlConnection);
+            sqlCommand.Parameters.AddWithValue("@name", SqlDbType.NVarChar).Value = textBox.Text;
+            dataAdapter = new SqlDataAdapter(sqlCommand);
+            dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            dataGridView.DataSource = dataTable;
+
+        }
+        catch (Exception ex) { 
+        }
+        finally { sqlConnection.Close(); }
+        
+
+    }
+
+
+
+    private void btn_exec_click(object sender, EventArgs e)
+    {
+        sqlCommandBuilder = new SqlCommandBuilder(dataAdapter);
+        dataAdapter.Update(dataTable);
+
 
     }
 }

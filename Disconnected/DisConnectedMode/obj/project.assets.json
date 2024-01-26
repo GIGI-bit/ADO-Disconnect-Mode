@@ -2496,11 +2496,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sevgi\\Downloads\\DersCodes\\DersCodes\\DisConnectedMode\\DisConnectedMode.csproj",
+      "projectUniqueName": "C:\\Users\\Sevgi\\Downloads\\DersCodes\\Disconnected\\DisConnectedMode\\DisConnectedMode.csproj",
       "projectName": "DisConnectedMode",
-      "projectPath": "C:\\Users\\Sevgi\\Downloads\\DersCodes\\DersCodes\\DisConnectedMode\\DisConnectedMode.csproj",
+      "projectPath": "C:\\Users\\Sevgi\\Downloads\\DersCodes\\Disconnected\\DisConnectedMode\\DisConnectedMode.csproj",
       "packagesPath": "C:\\Users\\Sevgi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sevgi\\Downloads\\DersCodes\\DersCodes\\DisConnectedMode\\obj\\",
+      "outputPath": "C:\\Users\\Sevgi\\Downloads\\DersCodes\\Disconnected\\DisConnectedMode\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Sevgi\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -31,6 +31,7 @@
             textBox = new TextBox();
             dataGridView = new DataGridView();
             btn_search = new Button();
+            btn_delete = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             SuspendLayout();
             // 
@@ -59,7 +60,7 @@
             // btn_search
             // 
             btn_search.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_search.Location = new Point(655, 7);
+            btn_search.Location = new Point(630, 7);
             btn_search.Margin = new Padding(3, 4, 3, 4);
             btn_search.Name = "btn_search";
             btn_search.Size = new Size(150, 56);
@@ -68,11 +69,24 @@
             btn_search.UseVisualStyleBackColor = true;
             btn_search.Click += btn_select_Click;
             // 
+            // btn_delete
+            // 
+            btn_delete.FlatStyle = FlatStyle.Popup;
+            btn_delete.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_delete.Location = new Point(786, 7);
+            btn_delete.Name = "btn_delete";
+            btn_delete.Size = new Size(94, 56);
+            btn_delete.TabIndex = 4;
+            btn_delete.Text = "EXEC";
+            btn_delete.UseVisualStyleBackColor = true;
+            btn_delete.Click += btn_exec_click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1199, 823);
+            Controls.Add(btn_delete);
             Controls.Add(btn_search);
             Controls.Add(dataGridView);
             Controls.Add(textBox);
@@ -90,5 +104,6 @@
         private Button btn_execute;
         private DataGridView dataGridView;
         private Button btn_search;
+        private Button btn_delete;
     }
 }
